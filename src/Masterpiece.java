@@ -17,13 +17,13 @@ public class Masterpiece extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        g.setColor(Color.RED);
+        g.setColor(new Color(255, 204, 204));
         g.fillOval(75, 133, 333, 333);
-        g.setColor(Color.BLUE);
+        g.setColor(Color.RED);
         g.fillRect(150, 350, 200, 40);
         g.setColor(Color.WHITE);
         g.fillRect(250, 350, 20, 20);
-        g.setColor(Color.PINK);
+        g.setColor(Color.GREEN);
         g.fillOval(150, 200, 60, 60);
         g.fillOval(250, 225, 50, 50);
         g.setColor(Color.BLACK);
@@ -31,7 +31,7 @@ public class Masterpiece extends JPanel {
         g.fillOval(270, 245, 10, 10);
         int[] xcoords = {125, 400, 400, 275, 250, 200, 125};
         int[] ycoords = {200, 200, 50, 125, 50, 125, 50};
-        g.setColor(Color.ORANGE);
+        g.setColor(new Color(204, 102, 0));
         g.fillPolygon(xcoords, ycoords, 7);
     }
 
@@ -41,7 +41,7 @@ public class Masterpiece extends JPanel {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             var panel = new Masterpiece();
-            panel.setBackground(Color.GREEN.darker());
+            panel.setBackground(new Color(51, 153, 255));
             var frame = new JFrame("So Beautiful");
             frame.setSize(500, 500);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
